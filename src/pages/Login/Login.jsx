@@ -24,7 +24,7 @@ export const Login = () => {
                 className="border-[#C3C8CF] border rounded p-4 focus:outline-primary"
               />
             </div>
-            <Link to="/start">
+            <Link to="/login/start">
               <button
                 type="button"
                 className="text-white text-[15px] font-medium bg-primary w-full py-3 px-2 rounded"

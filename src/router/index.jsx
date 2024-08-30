@@ -8,22 +8,24 @@ import {MainPages} from "@/pages/MainPages/MainPages";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "ChatGPT-Clone/",
     element: <Welcome />,
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <Login />, 
   },
   {
-    path: "/Start",
+    path: "/login/start",
     element: <Start />,
   },
   {
-    path: "/main",
+    path: "/login/start/main",
     element: <MainPages />,
   },
 ]);
+
+
 
 const Router = () => {
   return <RouterProvider router={router} />;

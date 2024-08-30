@@ -16,7 +16,7 @@ export const Welcome = () => {
         </div>
         <div className="flex justify-center gap-3 mt-[14px]">
           <Link
-            to="login"
+            to="/login"
             className="bg-primary text-sm rounded text-white font-medium px-[14px] py-[9px]"
           >
             Log in

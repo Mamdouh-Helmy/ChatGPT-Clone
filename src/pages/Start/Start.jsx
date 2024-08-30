@@ -15,7 +15,7 @@ export function Start() {
     <div className="flex">
       <div className="nav bg-[#202123] min-h-[100vh] w-[20%]  flex flex-col justify-between p-1 lg:flex  hidden ">
         <div>
-          <Link to="/main">
+          <Link to="/login/start/main">
             <div className="new-chat text-[13px] border border-[#444654] text-[#FFFFFF] rounded flex items-center gap-2 p-2 mt-2 cursor-pointer">
               <div className="icon-plus">
                 <Plus />
