@@ -27,7 +27,7 @@ export function Start() {
       </div>
       <div
         className={`nav bg-[#202123] min-h-[100vh] lg:w-[20%]  p-1 flex fixed w-[40%]" ${
-          check && "lg:left-[-306px] left-[-170px]"
+          check && "lg:left-[-1000px]"
         }`}
       >
         <div className="flex flex-col justify-between w-[100%]">
