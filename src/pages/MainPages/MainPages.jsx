@@ -3,7 +3,8 @@ import {
   Contrast,
   Discord,
   Enlarge,
-  Logout,
+  Logout1,
+  Logout2,
   AvatarUser,
   AvatarChatGPT,
   Like,
@@ -14,59 +15,76 @@ import {
   Message,
   Vector,
 } from "../../utils/icons.util";
+import { useState } from "react";
 
-export  function MainPages() {
+export function MainPages() {
+  const [check, setCheck] = useState(false);
+  const toggleCheck = () => {
+    setCheck(!check);
+  };
   return (
-    <div className="flex">
-      <div className="nav bg-[#202123] min-h-[100vh] w-[20%]  flex flex-col justify-between p-1 lg:flex  hidden ">
-        <div>
-          <div className="new-chat text-[13px] border border-[#444654] text-[#FFFFFF] rounded flex items-center gap-2 px-3 mt-2 py-2 cursor-pointer">
-            <div className="icon-plus">
-              <Plus />
+    <div className="flex relative">
+      <div
+        className="absolute right-[10px] top-[20px]  cursor-pointer z-10"
+        onClick={() => toggleCheck()}
+      >
+        <Logout2 />
+      </div>
+      <div
+        className={`nav bg-[#202123] min-h-[100vh] lg:w-[20%]  p-1 flex fixed w-[40%]" ${
+          check && "lg:left-[-306px] left-[-265px]"
+        }`}
+      >
+        <div className="flex flex-col justify-between w-[100%]">
+          <div>
+            <div className="new-chat text-[13px] border border-[#444654] text-[#FFFFFF] rounded flex items-center gap-2 px-3 mt-2 py-2 cursor-pointer">
+              <div className="icon-plus">
+                <Plus />
+              </div>
+              New chat
             </div>
-            New chat
+            <div className="new-chat bg-[#343540] text-[13px] border border-[#343540] text-[#FFFFFF] rounded flex items-center gap-2 px-3 py-3 mt-2 cursor-pointer">
+              <div className="icon-left">
+                <Message />
+              </div>
+              Chatbot definition expl
+              <div className="icon-right flex gap-2">
+                <Vector />
+                <Delete color={"#C5C5D1"} />
+              </div>
+            </div>
           </div>
-          <div className="new-chat bg-[#343540] text-[13px] border border-[#343540] text-[#FFFFFF] rounded flex items-center gap-2 px-3 py-3 mt-2 cursor-pointer">
-            <div className="icon-left">
-              <Message />
+          <div className="options mt-1 border-t border-[#444654]">
+            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
+              <div className="icon">
+                <Delete />
+              </div>
+              Clear conversations
             </div>
-            Chatbot definition expl
-            <div className="icon-right flex gap-2">
-              <Vector />
-              <Delete color={"#C5C5D1"} />
+            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
+              <div className="icon">
+                <Contrast />
+              </div>
+              Light mode
             </div>
-          </div>
-        </div>
-        <div className="options mt-1 border-t border-[#444654]">
-          <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-            <div className="icon">
-              <Delete />
+            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
+              <div className="icon">
+                <Discord />
+              </div>
+              OpenAI Discord
             </div>
-            Clear conversations
-          </div>
-          <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-            <div className="icon">
-              <Contrast />
+            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
+              <div className="icon">
+                <Enlarge />
+              </div>
+              Updates & FAQ
             </div>
-            Light mode
-          </div>
-          <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-            <div className="icon">
-              <Discord />
+            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
+              <div className="icon">
+                <Logout1 />
+              </div>
+              Log out
             </div>
-            OpenAI Discord
-          </div>
-          <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-            <div className="icon">
-              <Enlarge />
-            </div>
-            Updates & FAQ
-          </div>
-          <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-            <div className="icon">
-              <Logout />
-            </div>
-            Log out
           </div>
         </div>
       </div>

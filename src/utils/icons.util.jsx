@@ -204,7 +204,7 @@ export const Enlarge = () => (
   </svg>
 );
 
-export const Logout = () => (
+export const Logout1 = () => (
   <svg
     width="20"
     height="20"
@@ -219,6 +219,31 @@ export const Logout = () => (
       strokeLinecap="round"
       strokeLinejoin="round"
     />
+    <path
+      d="M14 15L19 10L14 5"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M19 10H7"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const Logout2 = () => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M14 15L19 10L14 5"
       stroke="white"
