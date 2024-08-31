@@ -32,7 +32,7 @@ export function MainPages() {
       </div>
       <div
         className={`nav bg-[#202123] min-h-[100vh] lg:w-[20%]  p-1 flex fixed w-[40%]" ${
-          check && "lg:left-[-1000px]"
+          check && "left-[-10000px]"
         }`}
       >
         <div className="flex flex-col justify-between w-[100%]">
