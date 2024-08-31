@@ -29,7 +29,7 @@ export function Start() {
         className={`nav bg-[#202123] min-h-[100vh]  ${check && "left-[-10000px]"} lg:w-[20%]  p-1 flex fixed w-[40%]"`}>
         <div className="flex flex-col justify-between w-[100%]">
           <div>
-            <Link to="/ChatGPT-Clone/main">
+            <Link to="/main">
               <div className="new-chat text-[13px] border border-[#444654] text-[#FFFFFF] rounded flex items-center gap-2 p-2 mt-2 cursor-pointer">
                 <div className="icon-plus">
                   <Plus />
