@@ -26,10 +26,7 @@ export function Start() {
         <Logout2 />
       </div>
       <div
-        className={`nav bg-[#202123] min-h-[100vh] lg:w-[20%]  p-1 flex fixed w-[40%]" ${
-          check && "left-[-10000px]"
-        }`}
-      >
+        className={`nav bg-[#202123] min-h-[100vh]  ${check && "left-[-10000px]"} lg:w-[20%]  p-1 flex fixed w-[40%]"`}>
         <div className="flex flex-col justify-between w-[100%]">
           <div>
             <Link to="/ChatGPT-Clone/main">
