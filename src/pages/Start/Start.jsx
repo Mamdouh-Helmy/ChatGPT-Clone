@@ -26,7 +26,10 @@ export function Start() {
         <Logout2 />
       </div>
       <div
-        className={`nav bg-[#202123] min-h-[100vh]  ${check && "left-[-10000px]"} lg:w-[20%]  p-1 flex fixed w-[40%]"`}>
+        className={`nav bg-[#202123] min-h-[100vh] p-1 flex fixed top-0 sm:w-[80%] md:w-[40%] lg:w-[20%] ${
+          check ? "left-[-10000px]" : "left-0"
+        } ${check ? "" : "lg:relative"}`}
+      >
         <div className="flex flex-col justify-between w-[100%]">
           <div>
             <Link to="/main">
