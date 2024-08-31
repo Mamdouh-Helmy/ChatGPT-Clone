@@ -1,29 +1,35 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 // Pages
 import { Welcome } from "@/pages/Welcome";
 import { Login } from "@/pages/Login";
-import {Start} from "@/pages/Start/Start";
-import {MainPages} from "@/pages/MainPages/MainPages";
+import { Start } from "@/pages/Start/Start";
+import { MainPages } from "@/pages/MainPages/MainPages";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/ChatGPT-Clone/",
+    path: "/",
     element: <Welcome />,
   },
   {
-    path: "/ChatGPT-Clone/login",
+    path: "/login",
     element: <Login />,
   },
   {
-    path: "/ChatGPT-Clone/start",
+    path: "/start",
     element: <Start />,
   },
   {
-    path: "/ChatGPT-Clone/main",
+    path: "/main",
     element: <MainPages />,
   },
 ]);
+
+const Router = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default Router;
 
 
 
