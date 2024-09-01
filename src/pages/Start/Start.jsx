@@ -3,10 +3,10 @@ import {
   Contrast,
   Discord,
   Enlarge,
-  Delete,
   Logout2,
   Flash,
   Limitations,
+  Logout1,
 } from "../../utils/icons.util";
 import { useState } from "react";
 import { Sidebar } from "../Component/Sidebar";
@@ -28,10 +28,10 @@ export function Start() {
   ];
 
   const options = [
-    { icon: <Delete />, text: "Clear conversations" },
     { icon: <Contrast />, text: "Light mode" },
     { icon: <Discord />, text: "OpenAI Discord" },
     { icon: <Enlarge />, text: "Updates & FAQ" },
+    { icon: <Logout1 />, text: "Log out" }
   ];
   return (
     <div className="flex relative">
