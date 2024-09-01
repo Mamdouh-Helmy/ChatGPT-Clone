@@ -86,7 +86,7 @@ export function MainPages() {
           </div>
         </div>
         <div>
-          <div className="regenerate p-2 cursor-pointer text-[13px] gap-2 mb-3 flex items-center justify-center w-fit my-0 mx-auto text-[#C5C5D1] border-[1px] border-solid border-[#444654] rounded-[3px]">
+          <div className="regenerate p-2 cursor-pointer text-[13px] gap-2 mb-2 flex items-center justify-center w-fit my-0 mx-auto text-[#C5C5D1] border-[1px] border-solid border-[#444654] rounded-[3px]">
             <div className="icon ">
               <Refresh />
             </div>
