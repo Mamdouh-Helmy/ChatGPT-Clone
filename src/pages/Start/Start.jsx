@@ -1,22 +1,39 @@
-import { Link } from "react-router-dom";
 import {
   Plus,
   Contrast,
   Discord,
   Enlarge,
-  Logout1,
+  Delete,
   Logout2,
   Flash,
   Limitations,
-  Send,
 } from "../../utils/icons.util";
 import { useState } from "react";
+import { Sidebar } from "../Component/Sidebar";
+import { Footer } from "../Component/Footer";
 
 export function Start() {
   const [check, setCheck] = useState(false);
   const toggleCheck = () => {
     setCheck(!check);
   };
+
+  const items = [
+    {
+      icon: <Plus />,
+      text: "New chat",
+      backgroundColor: "",
+      borerColor: "#343540",
+      icons: [""],
+    },
+  ];
+
+  const options = [
+    { icon: <Delete />, text: "Clear conversations" },
+    { icon: <Contrast />, text: "Light mode" },
+    { icon: <Discord />, text: "OpenAI Discord" },
+    { icon: <Enlarge />, text: "Updates & FAQ" },
+  ];
   return (
     <div className="flex relative">
       <div
@@ -25,50 +42,7 @@ export function Start() {
       >
         <Logout2 />
       </div>
-      <div
-        className={`nav bg-[#202123] min-h-[100vh] p-1 flex fixed top-0 sm:w-[80%] md:w-[40%] lg:w-[20%] ${
-          check ? "left-[-10000px]" : "left-0"
-        } ${check ? "" : "lg:relative"}`}
-      >
-        <div className="flex flex-col justify-between w-[100%]">
-          <div>
-            <Link to="/main">
-              <div className="new-chat text-[13px] border border-[#444654] text-[#FFFFFF] rounded flex items-center gap-2 p-2 mt-2 cursor-pointer">
-                <div className="icon-plus">
-                  <Plus />
-                </div>
-                New chat
-              </div>
-            </Link>
-          </div>
-          <div className="options mt-1 border-t border-[#444654]">
-            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-              <div className="icon">
-                <Contrast />
-              </div>
-              Light mode
-            </div>
-            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-              <div className="icon">
-                <Discord />
-              </div>
-              OpenAI Discord
-            </div>
-            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-              <div className="icon">
-                <Enlarge />
-              </div>
-              Updates & FAQ
-            </div>
-            <div className="icons-options text-[13px] flex items-center text-[#FFFFFF] gap-2 px-2 py-3 cursor-pointer">
-              <div className="icon">
-                <Logout1 />
-              </div>
-              Log out
-            </div>
-          </div>
-        </div>
-      </div>
+      <Sidebar check={check} items={items} options={options} link="/main" />
       <div className="page w-full lg:w-4/5 flex flex-col justify-between min-h-[100vh] bg-[#343541] lg:px-12 py-4 flex-grow-[5]">
         <div className="text text-[#FFFFFF] px-3">
           <h1 className="text-center text-4xl mb-4 pt-10">ChatGPT</h1>
@@ -129,21 +103,8 @@ export function Start() {
             </div>
           </div>
         </div>
-        <div className="input-text pt-10 pb-0 md:pb-5 px-3">
-          <div className="input w-[100%] bg-[#40414E] p-2 flex items-center border-[1px] border-solid border-[#303139] rounded-[4px]">
-            <input
-              type="text"
-              className="w-[100%] text-white outline-none border-none bg-#40414E bg-transparent"
-            />
-            <Send />
-          </div>
-          <div className="text-footer pt-2">
-            <p className="text text-[#9A9B9F] text-[14px] text-center">
-              <span className="underline">ChatGPT Jan 9 Version.</span> Free
-              Research Preview. Our goal is to make AI systems more natural and
-              safe to interact with. Your feedback will help us improve.
-            </p>
-          </div>
+        <div>
+          <Footer/>
         </div>
       </div>
     </div>
