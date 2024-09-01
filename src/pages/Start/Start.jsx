@@ -22,7 +22,7 @@ export function Start() {
     {
       icon: <Plus />,
       text: "New chat",
-      backgroundColor: "",
+      backgroundColor: "transparent",
       icons: [""],
     },
   ];
@@ -103,7 +103,7 @@ export function Start() {
           </div>
         </div>
         <div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </div>

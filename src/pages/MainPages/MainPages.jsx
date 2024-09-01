@@ -29,7 +29,7 @@ export function MainPages() {
     {
       icon: <Plus />,
       text: "New chat",
-      backgroundColor: "",
+      backgroundColor: "transparent",
       icons: [""],
     },
     {
