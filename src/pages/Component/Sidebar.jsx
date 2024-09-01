@@ -8,7 +8,6 @@ export function Sidebar({
   options = [""],
   link = "/",
 }) {
-    console.log(items)
   return (
     <div
       className={`nav bg-[#202123] min-h-[100vh] p-1 flex fixed top-0 sm:w-[80%] md:w-[40%] lg:w-[20%] ${
