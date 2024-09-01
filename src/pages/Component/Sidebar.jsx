@@ -21,7 +21,7 @@ export function Sidebar({
             <div key={index}>
               <Link to={`${link}`}>
                 <div
-                  className={`new-chat text-[13px] border border-[${item.borerColor}] text-[#FFFFFF] rounded flex items-center gap-2 px-3 mt-2 py-2 cursor-pointer bg-[${item.backgroundColor}]`}
+                  className={`new-chat text-[13px] border-[1px] border-solid border-[${item.borerColor}] text-[#FFFFFF] rounded flex items-center gap-2 px-3 mt-2 py-2 cursor-pointer bg-[${item.backgroundColor}]`}
                 >
                   <div className="icon-plus">{item.icon}</div>
                   <span>{item.text}</span>
