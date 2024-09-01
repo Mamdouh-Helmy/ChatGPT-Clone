@@ -23,7 +23,6 @@ export function Start() {
       icon: <Plus />,
       text: "New chat",
       backgroundColor: "",
-      borerColor: "#343540",
       icons: [""],
     },
   ];

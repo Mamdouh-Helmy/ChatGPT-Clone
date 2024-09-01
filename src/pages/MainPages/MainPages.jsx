@@ -30,14 +30,12 @@ export function MainPages() {
       icon: <Plus />,
       text: "New chat",
       backgroundColor: "",
-      borerColor: "#343540",
       icons: [""],
     },
     {
       icon: <Message />,
       text: "Chatbot definition expl",
       backgroundColor: "#343540",
-      borerColor: "#343540",
       icons: [<Vector />, <Delete color={"#C5C5D1"} />],
     },
   ];
